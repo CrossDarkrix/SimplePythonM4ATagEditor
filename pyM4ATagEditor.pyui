@@ -1,0 +1,416 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{140, 136}, {198, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "font_size" : 17,
+          "text_color" : "RGBA(0.964706,0.039216,0.039216,1.000000)",
+          "frame" : "{{63, 256}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "F0C43D38-6C65-467E-96CD-7BBBC46162EC",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "name" : "Artist",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{77, 504}, {164, 46}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "WriteTags",
+          "frame" : "{{123, 256}, {80, 32}}",
+          "title" : "タグを設定",
+          "uuid" : "D5DE99DF-528B-4B6C-9E12-F25A354338A5",
+          "class" : "Button",
+          "name" : "WriteTAG",
+          "font_size" : 21
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{28, 136}, {116, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "text_color" : "RGBA(1.000000,0.980392,0.956863,1.000000)",
+          "frame" : "{{88, 256}, {150, 32}}",
+          "uuid" : "837E03BD-0F83-4F9E-A137-33FB2041A2D7",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "アーティスト:",
+          "name" : "",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{28, 38}, {94, 29}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "font_name" : "<System>",
+          "frame" : "{{88, 256}, {150, 32}}",
+          "tint_color" : "RGBA(1.000000,0.315476,0.041667,1.000000)",
+          "uuid" : "837E03BD-0F83-4F9E-A137-33FB2041A2D7",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "ファイル名:",
+          "name" : "",
+          "text_color" : "RGBA(1.000000,0.980392,0.956863,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{120, 38}, {218, 29}}",
+        "class" : "TextField",
+        "attributes" : {
+          "font_size" : 17,
+          "font_name" : "<System>",
+          "frame" : "{{63, 256}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "F0C43D38-6C65-467E-96CD-7BBBC46162EC",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "name" : "FileName",
+          "text_color" : "RGBA(0.964706,0.039216,0.039216,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{104, 102}, {234, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "font_size" : 17,
+          "font_name" : "<System>",
+          "frame" : "{{63, 256}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "F0C43D38-6C65-467E-96CD-7BBBC46162EC",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "name" : "Title",
+          "text_color" : "RGBA(0.964706,0.039216,0.039216,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{28, 102}, {76, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "text_color" : "RGBA(1.000000,0.980392,0.956863,1.000000)",
+          "frame" : "{{88, 256}, {150, 32}}",
+          "uuid" : "A204C29D-DF49-4B5A-967D-51576A6E4F21",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "タイトル:",
+          "name" : "",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{202, 170}, {136, 34}}",
+        "class" : "TextField",
+        "attributes" : {
+          "font_size" : 17,
+          "font_name" : "<System>",
+          "frame" : "{{63, 256}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "F0C43D38-6C65-467E-96CD-7BBBC46162EC",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "name" : "AlbumArtist",
+          "text_color" : "RGBA(0.964706,0.039216,0.039216,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{28, 170}, {176, 34}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "",
+          "text_color" : "RGBA(1.000000,0.980392,0.956863,1.000000)",
+          "frame" : "{{88, 256}, {150, 32}}",
+          "uuid" : "BAE59617-C531-4A19-8A3B-EF00E75EC658",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "アルバムアーティスト:",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{120, 68}, {218, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "ViewFile",
+          "text_color" : "RGBA(1.000000,0.285714,0.000000,1.000000)",
+          "frame" : "{{88, 256}, {150, 32}}",
+          "uuid" : "2EB30EF0-77B5-4C02-8092-2B2954DB7895",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "",
+          "font_size" : 18,
+          "font_name" : "<System-Bold>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{104, 206}, {234, 34}}",
+        "class" : "TextField",
+        "attributes" : {
+          "name" : "Album",
+          "text_color" : "RGBA(0.964706,0.039216,0.039216,1.000000)",
+          "frame" : "{{63, 256}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "F0C43D38-6C65-467E-96CD-7BBBC46162EC",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{28, 206}, {76, 34}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "",
+          "text_color" : "RGBA(1.000000,0.980392,0.956863,1.000000)",
+          "frame" : "{{88, 256}, {150, 32}}",
+          "uuid" : "EDEE8BFF-4821-4F6C-80D7-637FE8093822",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "アルバム:",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{104, 241}, {234, 34}}",
+        "class" : "TextField",
+        "attributes" : {
+          "name" : "Genre",
+          "font_name" : "<System>",
+          "frame" : "{{63, 256}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "F0C43D38-6C65-467E-96CD-7BBBC46162EC",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "text_color" : "RGBA(0.964706,0.039216,0.039216,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{28, 241}, {76, 34}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "",
+          "text_color" : "RGBA(1.000000,0.980392,0.956863,1.000000)",
+          "frame" : "{{88, 256}, {150, 32}}",
+          "uuid" : "6B634C87-8875-4609-A559-D57C709763AD",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "ジャンル:",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{184, 379}, {108, 109}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "frame" : "{{111, 242}, {100, 100}}",
+          "class" : "ImageView",
+          "name" : "CoverArt",
+          "uuid" : "7B4FC13E-C9F3-404A-B8F8-9586B9C2B647"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{41, 392}, {81, 81}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "GetPicture",
+          "image_name" : "iob:ios7_plus_empty_256",
+          "frame" : "{{121, 276}, {80, 32}}",
+          "title" : "+",
+          "uuid" : "8C7A19FC-EAF2-43B2-869C-DE2CFD6BBF34",
+          "font_bold" : true,
+          "class" : "Button",
+          "name" : "PickImage",
+          "font_size" : 30
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{19, 319}, {334, 45}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "RemoteFile",
+          "frame" : "{{121, 276}, {80, 32}}",
+          "tint_color" : "RGBA(1.000000,0.125000,0.125000,1.000000)",
+          "title" : "共有されたファイルの表示",
+          "uuid" : "66C6552F-446D-4CD4-A736-5D9771DDF52A",
+          "class" : "Button",
+          "name" : "",
+          "font_size" : 22
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{28, 68}, {94, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "text_color" : "RGBA(1.000000,0.083333,0.083333,1.000000)",
+          "frame" : "{{86, 276}, {150, 32}}",
+          "uuid" : "93FFD189-1BFE-4473-87B4-6A76FF98CCA3",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "選択した曲:",
+          "name" : "",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{120, 277}, {218, 34}}",
+        "class" : "TextField",
+        "attributes" : {
+          "font_size" : 17,
+          "text_color" : "RGBA(0.964706,0.039216,0.039216,1.000000)",
+          "frame" : "{{63, 256}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "F0C43D38-6C65-467E-96CD-7BBBC46162EC",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "name" : "Year",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{28, 277}, {94, 34}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "text_color" : "RGBA(1.000000,0.980392,0.956863,1.000000)",
+          "frame" : "{{94, 276}, {150, 32}}",
+          "uuid" : "677B539F-0D25-49D1-A3C3-ACA547CA6774",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "リリース年:",
+          "name" : "",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{55, 6}, {263, 30}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "",
+          "text_color" : "RGBA(1.000000,0.083333,0.083333,1.000000)",
+          "frame" : "{{116, 277}, {150, 32}}",
+          "uuid" : "4B1A9C2E-07F4-45A0-A2A5-0C56F7AD5E0A",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "タグの設定",
+          "font_size" : 18,
+          "font_name" : "<System-Bold>"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {382, 585}}",
+    "class" : "View",
+    "attributes" : {
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "enabled" : true,
+      "background_color" : "RGBA(0.161049,0.161049,0.161049,1.000000)",
+      "name" : "　オーディオファイルのタグ設定",
+      "tint_color" : "RGBA(1.000000,0.000000,0.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]
