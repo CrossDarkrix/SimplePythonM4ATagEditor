@@ -25,7 +25,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{77, 504}, {164, 46}}",
+        "frame" : "{{104, 496}, {164, 46}}",
         "class" : "Button",
         "attributes" : {
           "action" : "WriteTags",
@@ -276,7 +276,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{184, 379}, {108, 109}}",
+        "frame" : "{{202, 372}, {108, 109}}",
         "class" : "ImageView",
         "attributes" : {
           "frame" : "{{111, 242}, {100, 100}}",
@@ -290,7 +290,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{41, 392}, {81, 81}}",
+        "frame" : "{{41, 390}, {81, 81}}",
         "class" : "Button",
         "attributes" : {
           "action" : "GetPicture",
@@ -404,11 +404,11 @@
     "frame" : "{{0, 0}, {382, 585}}",
     "class" : "View",
     "attributes" : {
-      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
-      "enabled" : true,
-      "background_color" : "RGBA(0.161049,0.161049,0.161049,1.000000)",
       "name" : "　オーディオファイルのタグ設定",
+      "enabled" : true,
       "tint_color" : "RGBA(1.000000,0.000000,0.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(0.161049,0.161049,0.161049,1.000000)",
       "flex" : ""
     },
     "selected" : false
