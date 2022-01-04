@@ -1,7 +1,6 @@
 import ui, photos, sys, os.path, appex
 from console import open_in
 from mutagen.mp4 import MP4, MP4Cover
-from mutagen.id3 import ID3
 from os import getcwd as pwd, remove
 from shutil import copyfile
 current_directory = pwd()
