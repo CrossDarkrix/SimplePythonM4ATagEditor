@@ -1,6 +1,7 @@
 import ui, photos, sys, os.path, appex
 from console import open_in
 from mutagen.mp4 import MP4, MP4Cover
+from mutagen.id3 import ID3
 from os import getcwd as pwd, remove
 from shutil import copyfile
 current_directory = pwd()
@@ -35,6 +36,58 @@ def RemoteFile(Remote):
 	ShowFileName = Remote.superview['ViewFile']
 	ShowFileName.text = '"{}"'.format(FilePath.split('/')[-1])
 	R['FileName'].text = '~/tmp/{}'.format(FilePath.split('/')[-1])
+
+def LoadMetaData(d):
+	E = d.superview
+	try:
+		AudioFile = MP4(FilePath)
+		AlbumArt = ui.Image.from_data(AudioFile['covr'][0])
+	except:
+		pass
+	try:
+		E['CoverArt'].image = AlbumArt
+	except:
+		pass
+	try:
+		E['Title'].text = AudioFile.tags['\xa9nam'][0]
+	except:
+		pass
+	try:
+		E['Artist'].text = AudioFile.tags['\xa9ART'][0]
+	except:
+		pass
+	try:
+		E['AlbumArtist'].text = AudioFile.tags['aART'][0]
+	except:
+		pass
+	try:
+		E['Album'].text = AudioFile.tags['\xa9alb'][0]
+	except:
+		pass
+	try:
+		E['Genre'].text = AudioFile.tags['\xa9gen'][0]
+	except:
+		pass
+	try:
+		E['Year'].text = AudioFile.tags['\xa9day'][0]
+	except:
+		pass
+	try:
+		TrackNum, TotalTrack = AudioFile.tags['trkn'][0]
+		E['TrackNum'].text = str(TrackNum)
+		E['TotalTrackNum'].text = str(TotalTrack)
+	except:
+		pass
+	try:
+			DiscNum, TotalDisc = AudioFile.tags['disk'][0]
+			E['DiscNum'].text = str(DiscNum)
+			E['TotalDiscNum'].text = str(TotalDisc)
+	except:
+		pass
+	try:
+		remove(FilePath)
+	except:
+		pass
 
 def AudioTagEdit(file_path, title=None, artist=None, albumartist=None, album=None, genre=None, year=None, track_num=None, total_track_num=None, disc_num=None, total_disc_num=None):
 

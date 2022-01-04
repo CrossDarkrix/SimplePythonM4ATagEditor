@@ -25,12 +25,12 @@
         "nodes" : [
 
         ],
-        "frame" : "{{104, 481}, {164, 46}}",
+        "frame" : "{{54, 481}, {251, 46}}",
         "class" : "Button",
         "attributes" : {
           "action" : "WriteTags",
           "frame" : "{{123, 256}, {80, 32}}",
-          "title" : "タグを設定",
+          "title" : "タグを設定して書き出す",
           "uuid" : "D5DE99DF-528B-4B6C-9E12-F25A354338A5",
           "class" : "Button",
           "name" : "WriteTAG",
@@ -195,7 +195,7 @@
           "name" : "ViewFile",
           "font_size" : 18
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
@@ -296,7 +296,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{104, 398}, {55, 54}}",
+        "frame" : "{{136, 398}, {55, 54}}",
         "class" : "Button",
         "attributes" : {
           "uuid" : "8C7A19FC-EAF2-43B2-869C-DE2CFD6BBF34",
@@ -309,8 +309,8 @@
           "action" : "GetPicture",
           "font_bold" : true,
           "class" : "Button",
-          "image_name" : "iob:ios7_plus_empty_256",
-          "name" : "PickImage"
+          "name" : "PickImage",
+          "image_name" : "iob:ios7_plus_empty_256"
         },
         "selected" : false
       },
@@ -545,15 +545,37 @@
           "font_name" : "<System>"
         },
         "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{43, 398}, {52, 54}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "70CFE9D2-4619-4095-8C29-F89C9170E215",
+          "name" : "Load",
+          "corner_radius" : 1,
+          "frame" : "{{151, 277}, {80, 32}}",
+          "border_color" : "RGBA(0.133333,0.133333,0.133333,1.000000)",
+          "border_width" : 1,
+          "title" : "",
+          "action" : "LoadMetaData",
+          "font_bold" : true,
+          "class" : "Button",
+          "image_name" : "iob:ios7_reload_256",
+          "font_size" : 19
+        },
+        "selected" : false
       }
     ],
     "frame" : "{{0, 0}, {382, 585}}",
     "class" : "View",
     "attributes" : {
-      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "name" : "M4Aファイルのタグ設定",
       "enabled" : true,
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "background_color" : "RGBA(0.161049,0.161049,0.161049,1.000000)",
-      "name" : "　オーディオファイルのタグ設定",
       "tint_color" : "RGBA(1.000000,0.000000,0.000000,1.000000)",
       "flex" : ""
     },
