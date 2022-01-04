@@ -5,7 +5,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{140, 136}, {198, 32}}",
+        "frame" : "{{140, 104}, {198, 32}}",
         "class" : "TextField",
         "attributes" : {
           "font_size" : 17,
@@ -25,7 +25,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{104, 496}, {164, 46}}",
+        "frame" : "{{104, 481}, {164, 46}}",
         "class" : "Button",
         "attributes" : {
           "action" : "WriteTags",
@@ -42,7 +42,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{28, 136}, {116, 32}}",
+        "frame" : "{{28, 104}, {116, 32}}",
         "class" : "Label",
         "attributes" : {
           "font_size" : 18,
@@ -61,7 +61,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{28, 38}, {94, 29}}",
+        "frame" : "{{28, 14}, {94, 29}}",
         "class" : "Label",
         "attributes" : {
           "font_size" : 18,
@@ -81,7 +81,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{120, 38}, {218, 29}}",
+        "frame" : "{{120, 14}, {218, 29}}",
         "class" : "TextField",
         "attributes" : {
           "font_size" : 17,
@@ -101,7 +101,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{104, 102}, {234, 32}}",
+        "frame" : "{{104, 72}, {234, 32}}",
         "class" : "TextField",
         "attributes" : {
           "font_size" : 17,
@@ -121,7 +121,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{28, 102}, {76, 32}}",
+        "frame" : "{{28, 72}, {76, 32}}",
         "class" : "Label",
         "attributes" : {
           "font_size" : 18,
@@ -140,7 +140,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{202, 170}, {136, 34}}",
+        "frame" : "{{202, 136}, {136, 34}}",
         "class" : "TextField",
         "attributes" : {
           "font_size" : 17,
@@ -160,7 +160,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{28, 170}, {176, 34}}",
+        "frame" : "{{28, 136}, {176, 34}}",
         "class" : "Label",
         "attributes" : {
           "name" : "",
@@ -179,26 +179,29 @@
         "nodes" : [
 
         ],
-        "frame" : "{{120, 68}, {218, 32}}",
+        "frame" : "{{120, 43}, {218, 29}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "ViewFile",
-          "text_color" : "RGBA(1.000000,0.285714,0.000000,1.000000)",
-          "frame" : "{{88, 256}, {150, 32}}",
           "uuid" : "2EB30EF0-77B5-4C02-8092-2B2954DB7895",
-          "class" : "Label",
+          "corner_radius" : 1,
+          "frame" : "{{88, 256}, {150, 32}}",
+          "border_color" : "RGBA(0.133333,0.133333,0.133333,1.000000)",
+          "border_width" : 1,
           "alignment" : "center",
+          "text_color" : "RGBA(1.000000,0.285714,0.000000,1.000000)",
           "text" : "",
-          "font_size" : 18,
-          "font_name" : "<System-Bold>"
+          "font_name" : "<System-Bold>",
+          "class" : "Label",
+          "name" : "ViewFile",
+          "font_size" : 18
         },
-        "selected" : false
+        "selected" : true
       },
       {
         "nodes" : [
 
         ],
-        "frame" : "{{104, 206}, {234, 34}}",
+        "frame" : "{{104, 170}, {234, 34}}",
         "class" : "TextField",
         "attributes" : {
           "name" : "Album",
@@ -218,7 +221,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{28, 206}, {76, 34}}",
+        "frame" : "{{28, 170}, {76, 34}}",
         "class" : "Label",
         "attributes" : {
           "name" : "",
@@ -237,7 +240,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{104, 241}, {234, 34}}",
+        "frame" : "{{104, 204}, {234, 34}}",
         "class" : "TextField",
         "attributes" : {
           "name" : "Genre",
@@ -257,7 +260,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{28, 241}, {76, 34}}",
+        "frame" : "{{28, 204}, {76, 34}}",
         "class" : "Label",
         "attributes" : {
           "name" : "",
@@ -276,13 +279,16 @@
         "nodes" : [
 
         ],
-        "frame" : "{{202, 372}, {108, 109}}",
+        "frame" : "{{227, 381}, {91, 92}}",
         "class" : "ImageView",
         "attributes" : {
+          "border_width" : 1,
           "frame" : "{{111, 242}, {100, 100}}",
+          "border_color" : "RGBA(0.133333,0.133333,0.133333,1.000000)",
+          "corner_radius" : 1,
           "class" : "ImageView",
-          "name" : "CoverArt",
-          "uuid" : "7B4FC13E-C9F3-404A-B8F8-9586B9C2B647"
+          "uuid" : "7B4FC13E-C9F3-404A-B8F8-9586B9C2B647",
+          "name" : "CoverArt"
         },
         "selected" : false
       },
@@ -290,18 +296,21 @@
         "nodes" : [
 
         ],
-        "frame" : "{{41, 390}, {81, 81}}",
+        "frame" : "{{104, 398}, {55, 54}}",
         "class" : "Button",
         "attributes" : {
-          "action" : "GetPicture",
-          "image_name" : "iob:ios7_plus_empty_256",
-          "frame" : "{{121, 276}, {80, 32}}",
-          "title" : "+",
           "uuid" : "8C7A19FC-EAF2-43B2-869C-DE2CFD6BBF34",
+          "font_size" : 30,
+          "corner_radius" : 1,
+          "frame" : "{{121, 276}, {80, 32}}",
+          "border_color" : "RGBA(0.133333,0.133333,0.133333,1.000000)",
+          "border_width" : 1,
+          "title" : "+",
+          "action" : "GetPicture",
           "font_bold" : true,
           "class" : "Button",
-          "name" : "PickImage",
-          "font_size" : 30
+          "image_name" : "iob:ios7_plus_empty_256",
+          "name" : "PickImage"
         },
         "selected" : false
       },
@@ -309,7 +318,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{19, 319}, {334, 45}}",
+        "frame" : "{{17, 328}, {334, 45}}",
         "class" : "Button",
         "attributes" : {
           "action" : "RemoteFile",
@@ -327,7 +336,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{28, 68}, {94, 32}}",
+        "frame" : "{{28, 43}, {94, 29}}",
         "class" : "Label",
         "attributes" : {
           "font_size" : 18,
@@ -346,7 +355,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{120, 277}, {218, 34}}",
+        "frame" : "{{120, 238}, {218, 34}}",
         "class" : "TextField",
         "attributes" : {
           "font_size" : 17,
@@ -366,7 +375,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{28, 277}, {94, 34}}",
+        "frame" : "{{28, 238}, {94, 34}}",
         "class" : "Label",
         "attributes" : {
           "font_size" : 18,
@@ -385,18 +394,155 @@
         "nodes" : [
 
         ],
-        "frame" : "{{55, 6}, {263, 30}}",
+        "frame" : "{{111, 272}, {25, 34}}",
+        "class" : "TextField",
+        "attributes" : {
+          "name" : "TrackNum",
+          "font_name" : "<System>",
+          "frame" : "{{63, 256}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "F0C43D38-6C65-467E-96CD-7BBBC46162EC",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "text_color" : "RGBA(0.964706,0.039216,0.039216,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{150, 272}, {25, 34}}",
+        "class" : "TextField",
+        "attributes" : {
+          "font_size" : 17,
+          "text_color" : "RGBA(0.964706,0.039216,0.039216,1.000000)",
+          "frame" : "{{63, 256}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "F0C43D38-6C65-467E-96CD-7BBBC46162EC",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "name" : "TotalTrackNum",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{28, 272}, {84, 34}}",
         "class" : "Label",
         "attributes" : {
           "name" : "",
-          "text_color" : "RGBA(1.000000,0.083333,0.083333,1.000000)",
+          "text_color" : "RGBA(1.000000,0.980392,0.956863,1.000000)",
           "frame" : "{{116, 277}, {150, 32}}",
-          "uuid" : "4B1A9C2E-07F4-45A0-A2A5-0C56F7AD5E0A",
+          "uuid" : "34F3F7C6-46CD-4E98-BCED-3912F7B83F9E",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "曲順\/曲数:",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{136, 272}, {14, 34}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "",
+          "text_color" : "RGBA(1.000000,0.980392,0.956863,1.000000)",
+          "frame" : "{{116, 277}, {150, 32}}",
+          "uuid" : "A2BB3FA7-F951-4AEF-8204-57A136B9505D",
           "class" : "Label",
           "alignment" : "center",
-          "text" : "タグの設定",
-          "font_size" : 18,
+          "text" : "\/",
+          "font_size" : 25,
           "font_name" : "<System-Bold>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{313, 272}, {25, 34}}",
+        "class" : "TextField",
+        "attributes" : {
+          "font_size" : 17,
+          "text_color" : "RGBA(0.964706,0.039216,0.039216,1.000000)",
+          "frame" : "{{63, 256}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "F0C43D38-6C65-467E-96CD-7BBBC46162EC",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "name" : "TotalDiscNum",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{275, 272}, {24, 34}}",
+        "class" : "TextField",
+        "attributes" : {
+          "name" : "DiscNum",
+          "font_name" : "<System>",
+          "frame" : "{{63, 256}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "F0C43D38-6C65-467E-96CD-7BBBC46162EC",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "text_color" : "RGBA(0.964706,0.039216,0.039216,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{299, 272}, {14, 34}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "",
+          "text_color" : "RGBA(1.000000,0.980392,0.956863,1.000000)",
+          "frame" : "{{116, 277}, {150, 32}}",
+          "uuid" : "BC0976A6-A106-44DC-8EF4-C0785D907758",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "\/",
+          "font_size" : 25,
+          "font_name" : "<System-Bold>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{189, 272}, {86, 34}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "",
+          "text_color" : "RGBA(1.000000,0.980392,0.956863,1.000000)",
+          "frame" : "{{116, 277}, {150, 32}}",
+          "uuid" : "5273E48F-8E48-4119-A0FB-56C13F969471",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "枚数\/総数:",
+          "font_size" : 18,
+          "font_name" : "<System>"
         },
         "selected" : false
       }
@@ -404,11 +550,11 @@
     "frame" : "{{0, 0}, {382, 585}}",
     "class" : "View",
     "attributes" : {
-      "name" : "　オーディオファイルのタグ設定",
-      "enabled" : true,
-      "tint_color" : "RGBA(1.000000,0.000000,0.000000,1.000000)",
       "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "enabled" : true,
       "background_color" : "RGBA(0.161049,0.161049,0.161049,1.000000)",
+      "name" : "　オーディオファイルのタグ設定",
+      "tint_color" : "RGBA(1.000000,0.000000,0.000000,1.000000)",
       "flex" : ""
     },
     "selected" : false

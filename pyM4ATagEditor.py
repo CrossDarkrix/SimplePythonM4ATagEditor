@@ -36,7 +36,7 @@ def RemoteFile(Remote):
 	ShowFileName.text = '"{}"'.format(FilePath.split('/')[-1])
 	R['FileName'].text = '~/tmp/{}'.format(FilePath.split('/')[-1])
 
-def AudioTagEdit(file_path, title=None, artist=None, albumartist=None, album=None, genre=None, year=None):
+def AudioTagEdit(file_path, title=None, artist=None, albumartist=None, album=None, genre=None, year=None, track_num=None, total_track_num=None, disc_num=None, total_disc_num=None):
 
 	if file_path.split('/')[-1].split('.')[-1].lower() == 'm4a':
 		AudioFile = MP4(file_path)
@@ -52,6 +52,23 @@ def AudioTagEdit(file_path, title=None, artist=None, albumartist=None, album=Non
 			AudioFile.tags['\xa9gen'] = genre
 		if year:
 			AudioFile.tags['\xa9day'] = year
+		if total_track_num:
+			if track_num:
+				AudioFile.tags['trkn'] = [(int(track_num), int(total_track_num))]
+			else:
+				AudioFile.tags['trkn'] = [(0, int(total_track_num))]
+		else:
+			if track_num:
+				AudioFile.tags['trkn'] = [(int(track_num), int(track_num))]
+		if total_disc_num:
+			if disc_num:
+				AudioFile.tags['disk'] = [(int(disc_num), int(total_disc_num))]
+			else:
+				AudioFile.tags['disk'] = [(0, int(total_disc_num))]
+		else:
+			if disc_num:
+				AudioFile.tags['disk'] = [(int(disc_num), int(disc_num))]
+
 		try:
 			AudioFile.tags['covr'] = [MP4Cover(ImgBytes)]
 		except NameError:
@@ -83,8 +100,12 @@ def WriteTags(sender):
 	Album = i['Album'].text
 	Genre = i['Genre'].text
 	Year = i['Year'].text
+	TotalTrackNumbar = i['TotalTrackNum'].text
+	TrackNumbar = i['TrackNum'].text
+	TotalDiscNumbar = i['TotalDiscNum'].text
+	DiscNumbar = i['DiscNum'].text
 
-	AudioTagEdit(FilePath, title=Title, artist=Artist, albumartist=AlbumArtist, album=Album, genre=Genre, year=Year)
+	AudioTagEdit(FilePath, title=Title, artist=Artist, albumartist=AlbumArtist, album=Album, genre=Genre, year=Year, track_num=TrackNumbar, total_track_num=TotalTrackNumbar, disc_num=DiscNumbar, total_disc_num=TotalDiscNumbar)
 
 v = ui.load_view()
 v.present('sheet')
