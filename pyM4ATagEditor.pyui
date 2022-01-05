@@ -5,7 +5,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{140, 104}, {198, 32}}",
+        "frame" : "{{144, 104}, {194, 32}}",
         "class" : "TextField",
         "attributes" : {
           "font_size" : 17,
@@ -140,7 +140,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{202, 136}, {136, 34}}",
+        "frame" : "{{204, 136}, {134, 34}}",
         "class" : "TextField",
         "attributes" : {
           "font_size" : 17,
@@ -179,7 +179,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{120, 43}, {218, 29}}",
+        "frame" : "{{167, 43}, {172, 29}}",
         "class" : "Label",
         "attributes" : {
           "uuid" : "2EB30EF0-77B5-4C02-8092-2B2954DB7895",
@@ -296,7 +296,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{136, 398}, {55, 54}}",
+        "frame" : "{{150, 398}, {55, 54}}",
         "class" : "Button",
         "attributes" : {
           "uuid" : "8C7A19FC-EAF2-43B2-869C-DE2CFD6BBF34",
@@ -309,8 +309,8 @@
           "action" : "GetPicture",
           "font_bold" : true,
           "class" : "Button",
-          "name" : "PickImage",
-          "image_name" : "iob:ios7_plus_empty_256"
+          "image_name" : "iob:ios7_plus_empty_256",
+          "name" : "PickImage"
         },
         "selected" : false
       },
@@ -336,7 +336,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{28, 43}, {94, 29}}",
+        "frame" : "{{28, 43}, {140, 29}}",
         "class" : "Label",
         "attributes" : {
           "font_size" : 18,
@@ -345,7 +345,7 @@
           "uuid" : "93FFD189-1BFE-4473-87B4-6A76FF98CCA3",
           "class" : "Label",
           "alignment" : "left",
-          "text" : "選択した曲:",
+          "text" : "読み込みファイル:",
           "name" : "",
           "font_name" : "<System>"
         },
@@ -550,11 +550,11 @@
         "nodes" : [
 
         ],
-        "frame" : "{{43, 398}, {52, 54}}",
+        "frame" : "{{90, 398}, {55, 54}}",
         "class" : "Button",
         "attributes" : {
           "uuid" : "70CFE9D2-4619-4095-8C29-F89C9170E215",
-          "name" : "Load",
+          "image_name" : "iob:ios7_reload_256",
           "corner_radius" : 1,
           "frame" : "{{151, 277}, {80, 32}}",
           "border_color" : "RGBA(0.133333,0.133333,0.133333,1.000000)",
@@ -563,8 +563,87 @@
           "action" : "LoadMetaData",
           "font_bold" : true,
           "class" : "Button",
-          "image_name" : "iob:ios7_reload_256",
+          "name" : "Load",
           "font_size" : 19
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{30, 398}, {55, 54}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "70CFE9D2-4619-4095-8C29-F89C9170E215",
+          "font_size" : 19,
+          "corner_radius" : 1,
+          "frame" : "{{151, 277}, {80, 32}}",
+          "border_color" : "RGBA(0.133333,0.133333,0.133333,1.000000)",
+          "border_width" : 1,
+          "title" : "",
+          "action" : "LoadedTmpFileDelete",
+          "font_bold" : true,
+          "class" : "Button",
+          "image_name" : "iob:close_32",
+          "name" : "Delete"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{31, 453}, {53, 13}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "",
+          "text_color" : "RGBA(1.000000,0.083333,0.083333,1.000000)",
+          "frame" : "{{116, 277}, {150, 32}}",
+          "uuid" : "531803AC-03CD-4F11-B3E0-4EA55B0FD550",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "一時ファイル削除",
+          "font_size" : 7,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{91, 453}, {53, 13}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "",
+          "text_color" : "RGBA(1.000000,0.082353,0.082353,1.000000)",
+          "frame" : "{{116, 277}, {150, 32}}",
+          "uuid" : "8C08A1EF-F35D-478C-8053-CC566753B723",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "データ読み込み",
+          "font_size" : 7,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{151, 453}, {53, 13}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "",
+          "text_color" : "RGBA(1.000000,0.082353,0.082353,1.000000)",
+          "frame" : "{{116, 277}, {150, 32}}",
+          "uuid" : "5CAC2566-B9F6-48E7-9B2C-A10FE2D285FC",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "画像の読み込み",
+          "font_size" : 7,
+          "font_name" : "<System>"
         },
         "selected" : false
       }
@@ -574,9 +653,9 @@
     "attributes" : {
       "name" : "M4Aファイルのタグ設定",
       "enabled" : true,
-      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "background_color" : "RGBA(0.161049,0.161049,0.161049,1.000000)",
       "tint_color" : "RGBA(1.000000,0.000000,0.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "flex" : ""
     },
     "selected" : false

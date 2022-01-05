@@ -83,6 +83,10 @@ def LoadMetaData(d):
 			E['TotalDiscNum'].text = str(TotalDisc)
 	except:
 		pass
+
+def LoadedTmpFileDelete(_se):
+	s = _se.superview
+	s['ViewFile'].text = '一時ファイル削除済み'
 	try:
 		remove(FilePath)
 	except:
