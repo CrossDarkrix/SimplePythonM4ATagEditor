@@ -29,10 +29,13 @@
         "class" : "Button",
         "attributes" : {
           "action" : "WriteTags",
+          "border_width" : 1,
           "frame" : "{{123, 256}, {80, 32}}",
           "title" : "タグを設定して書き出す",
           "uuid" : "D5DE99DF-528B-4B6C-9E12-F25A354338A5",
           "class" : "Button",
+          "corner_radius" : 1,
+          "border_color" : "RGBA(0.133333,0.133333,0.133333,1.000000)",
           "name" : "WriteTAG",
           "font_size" : 21
         },
@@ -309,8 +312,8 @@
           "action" : "GetPicture",
           "font_bold" : true,
           "class" : "Button",
-          "image_name" : "iob:ios7_plus_empty_256",
-          "name" : "PickImage"
+          "name" : "PickImage",
+          "image_name" : "iob:ios7_plus_empty_256"
         },
         "selected" : false
       },
@@ -322,11 +325,14 @@
         "class" : "Button",
         "attributes" : {
           "action" : "RemoteFile",
+          "border_width" : 1,
           "frame" : "{{121, 276}, {80, 32}}",
           "tint_color" : "RGBA(1.000000,0.125000,0.125000,1.000000)",
           "title" : "共有されたファイルの表示",
           "uuid" : "66C6552F-446D-4CD4-A736-5D9771DDF52A",
           "class" : "Button",
+          "corner_radius" : 1,
+          "border_color" : "RGBA(0.133333,0.133333,0.133333,1.000000)",
           "name" : "",
           "font_size" : 22
         },
@@ -554,7 +560,7 @@
         "class" : "Button",
         "attributes" : {
           "uuid" : "70CFE9D2-4619-4095-8C29-F89C9170E215",
-          "image_name" : "iob:ios7_reload_256",
+          "name" : "Load",
           "corner_radius" : 1,
           "frame" : "{{151, 277}, {80, 32}}",
           "border_color" : "RGBA(0.133333,0.133333,0.133333,1.000000)",
@@ -563,7 +569,7 @@
           "action" : "LoadMetaData",
           "font_bold" : true,
           "class" : "Button",
-          "name" : "Load",
+          "image_name" : "iob:ios7_reload_256",
           "font_size" : 19
         },
         "selected" : false
@@ -585,8 +591,8 @@
           "action" : "LoadedTmpFileDelete",
           "font_bold" : true,
           "class" : "Button",
-          "image_name" : "iob:close_32",
-          "name" : "Delete"
+          "name" : "Delete",
+          "image_name" : "iob:close_32"
         },
         "selected" : false
       },
@@ -651,11 +657,11 @@
     "frame" : "{{0, 0}, {382, 585}}",
     "class" : "View",
     "attributes" : {
-      "name" : "M4Aファイルのタグ設定",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "enabled" : true,
       "background_color" : "RGBA(0.161049,0.161049,0.161049,1.000000)",
+      "name" : "M4Aファイルのタグ設定",
       "tint_color" : "RGBA(1.000000,0.000000,0.000000,1.000000)",
-      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "flex" : ""
     },
     "selected" : false
