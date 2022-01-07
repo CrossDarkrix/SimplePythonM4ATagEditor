@@ -28,7 +28,7 @@
         "frame" : "{{54, 481}, {251, 46}}",
         "class" : "Button",
         "attributes" : {
-          "action" : "WriteTags",
+          "action" : "AudioTagEdit",
           "border_width" : 1,
           "frame" : "{{123, 256}, {80, 32}}",
           "title" : "タグを設定して書き出す",
@@ -89,6 +89,7 @@
         "attributes" : {
           "font_size" : 17,
           "font_name" : "<System>",
+          "action" : "LoadFileName",
           "frame" : "{{63, 256}, {200, 32}}",
           "spellchecking_type" : "default",
           "class" : "TextField",
@@ -312,8 +313,8 @@
           "action" : "GetPicture",
           "font_bold" : true,
           "class" : "Button",
-          "name" : "PickImage",
-          "image_name" : "iob:ios7_plus_empty_256"
+          "image_name" : "iob:ios7_plus_empty_256",
+          "name" : "PickImage"
         },
         "selected" : false
       },
@@ -560,7 +561,7 @@
         "class" : "Button",
         "attributes" : {
           "uuid" : "70CFE9D2-4619-4095-8C29-F89C9170E215",
-          "name" : "Load",
+          "image_name" : "iob:ios7_reload_256",
           "corner_radius" : 1,
           "frame" : "{{151, 277}, {80, 32}}",
           "border_color" : "RGBA(0.133333,0.133333,0.133333,1.000000)",
@@ -569,7 +570,7 @@
           "action" : "LoadMetaData",
           "font_bold" : true,
           "class" : "Button",
-          "image_name" : "iob:ios7_reload_256",
+          "name" : "Load",
           "font_size" : 19
         },
         "selected" : false
@@ -588,13 +589,13 @@
           "border_color" : "RGBA(0.133333,0.133333,0.133333,1.000000)",
           "border_width" : 1,
           "title" : "",
-          "action" : "LoadedTmpFileDelete",
+          "action" : "HelpPage",
           "font_bold" : true,
           "class" : "Button",
-          "name" : "Delete",
-          "image_name" : "iob:close_32"
+          "image_name" : "iob:help_32",
+          "name" : "Delete"
         },
-        "selected" : false
+        "selected" : true
       },
       {
         "nodes" : [
@@ -609,7 +610,7 @@
           "uuid" : "531803AC-03CD-4F11-B3E0-4EA55B0FD550",
           "class" : "Label",
           "alignment" : "center",
-          "text" : "一時ファイル削除",
+          "text" : "ヘルプページ",
           "font_size" : 7,
           "font_name" : "<System>"
         },
@@ -657,12 +658,13 @@
     "frame" : "{{0, 0}, {382, 585}}",
     "class" : "View",
     "attributes" : {
-      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
-      "enabled" : true,
-      "background_color" : "RGBA(0.161049,0.161049,0.161049,1.000000)",
-      "name" : "M4Aファイルのタグ設定",
+      "flex" : "",
+      "custom_class" : "M4A_TagEditor",
       "tint_color" : "RGBA(1.000000,0.000000,0.000000,1.000000)",
-      "flex" : ""
+      "enabled" : true,
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(0.161049,0.161049,0.161049,1.000000)",
+      "name" : "M4Aファイルのタグ設定"
     },
     "selected" : false
   }

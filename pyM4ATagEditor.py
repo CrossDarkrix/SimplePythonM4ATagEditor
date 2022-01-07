@@ -5,6 +5,30 @@ from os import getcwd as pwd, remove
 from shutil import copyfile
 current_directory = pwd()
 FilePath = ''
+HelpText = """\t\tM4ATagEditor ヘルプページ\n
+[使い方]
+・Pythonista3からの場合:
+「ファイル名」に編集したいm4aファイルのフルパスを入力してください。\n
+・共有メニューからの場合:
+ファイルを長押し等で共有メニューを開き、「Run Pythonista Script」から任意の名前にしたエクステンションを開く。\n
+[各種ボタンの説明]
+・共有されたファイルの表示:
+共有メニューから開いたファイルを表示させる為のボタンです。\n
+・ヘルプボタン:
+このページを開くボタンです。\n
+・データの読み込み:
+共有メニューから開いたファイルからメタデータを読み込みます。\n
+・画像の読み込み:
+フォトライブラリーからアルバムジャケットを選べます。\n
+・タグを設定して書き出す:
+設定したメタデータをファイル(一時ファイル)に書き出して他のアプリから開けるようにします。\n
+[Q&A]
+・一時ファイルの消し方:
+左上にある「❌」ボタンを押すと一時ファイルが削除される様になっており、手動で消したい場合は「$HOME/tmp」に一時ファイルを保存しています。\n
+・一時ファイルを何故作成するか:
+共有メニューの制約上共有したファイルへ直接書き込めないようです。\nなので一時ファイルをPythonista3へコピーしてから書き出しています。\n
+・何故M4A専用なのか:
+今どきM4Aだけのタグの書き出しは使い勝手が限られるのですが、Pythonista3が使えるメモリーサイズが限られているのでFlac等を読み込むとクラッシュしてしまうのと、アルバムジャケットを読み書きするのが複雑なのでM4Aだけに絞りました。\n\n\n\n\n"""
 
 try:
 	tmp_read_file = appex.get_attachments()[0]
@@ -84,18 +108,41 @@ def LoadMetaData(d):
 	except:
 		pass
 
-def LoadedTmpFileDelete(_se):
-	s = _se.superview
-	s['ViewFile'].text = '一時ファイル削除済み'
-	try:
-		remove(FilePath)
-	except:
-		pass
+def AudioTagEdit(AS):
+	i = AS.superview
+	title = i['Title'].text
+	if title == '':
+		title = None
+	artist = i['Artist'].text
+	if artist == '':
+		artist = None
+	albumartist = i['AlbumArtist'].text
+	if albumartist == '':
+		albumartist = None
+	album = i['Album'].text
+	if album == '':
+		album = None
+	genre = i['Genre'].text
+	if genre == '':
+		genre = None
+	year = i['Year'].text
+	if year == '':
+		year = None
+	total_track_num = i['TotalTrackNum'].text
+	if total_track_num == '':
+		total_track_num = None
+	track_num = i['TrackNum'].text
+	if track_num == '':
+		track_num = None
+	total_disc_num = i['TotalDiscNum'].text
+	if total_disc_num == '':
+		total_disc_num = None
+	disc_num = i['DiscNum'].text
+	if disc_num == '':
+		disc_num = None
 
-def AudioTagEdit(file_path, title=None, artist=None, albumartist=None, album=None, genre=None, year=None, track_num=None, total_track_num=None, disc_num=None, total_disc_num=None):
-
-	if file_path.split('/')[-1].split('.')[-1].lower() == 'm4a':
-		AudioFile = MP4(file_path)
+	if FilePath.split('/')[-1].split('.')[-1].lower() == 'm4a':
+		AudioFile = MP4(FilePath)
 		if title:
 			AudioFile.tags['\xa9nam'] = title
 		if artist:
@@ -130,38 +177,56 @@ def AudioTagEdit(file_path, title=None, artist=None, albumartist=None, album=Non
 		except NameError:
 			pass
 		AudioFile.save()
-		open_in(file_path)
-		remove(file_path)
+		open_in(FilePath)
+		remove(FilePath)
 	else:
 		sys.exit(0)
 
-def WriteTags(sender):
+def LoadFileName(sf):
 	global FilePath
-	i = sender.superview
-	filename = sender.superview['ViewFile']
+	filename = sf.superview
 	if not FilePath == '':
-		filename.text = '"{}"'.format(FilePath.split('/')[-1])
+		filename['ViewFile'].text = '"{}"'.format(FilePath.split('/')[-1])
 	else:
-		tmpAudioFile = os.path.join(current_directory, i['FileName'].text)
 		try:
-			copyfile(tmpAudioFile, os.path.join(os.getenv('HOME'), 'tmp',  i['FileName'].text))
+			if filename['FileName'].text[0] + filename['FileName'].text[1] == './':
+				tmpAudioFile = os.path.join(current_directory, filename['FileName'].text)
+			else:
+				tmpAudioFile = os.path.join(filename['FileName'].text)
+		except:
+			tmpAudioFile = os.path.join(filename['FileName'].text)
+		try:
+			copyfile(tmpAudioFile, os.path.join(os.getenv('HOME'), 'tmp',  filename['FileName'].text))
 		except:
 			pass
-		FilePath = os.path.join(os.getenv('HOME'), 'tmp', i['FileName'].text)
-		filename.text = '"{}"'.format(FilePath.split('/')[-1])
-	
-	Title = i['Title'].text
-	Artist = i['Artist'].text
-	AlbumArtist = i['AlbumArtist'].text
-	Album = i['Album'].text
-	Genre = i['Genre'].text
-	Year = i['Year'].text
-	TotalTrackNumbar = i['TotalTrackNum'].text
-	TrackNumbar = i['TrackNum'].text
-	TotalDiscNumbar = i['TotalDiscNum'].text
-	DiscNumbar = i['DiscNum'].text
+		FilePath = os.path.join(os.getenv('HOME'), 'tmp', filename['FileName'].text)
+		filename['ViewFile'].text = '"{}"'.format(FilePath.split('/')[-1])
 
-	AudioTagEdit(FilePath, title=Title, artist=Artist, albumartist=AlbumArtist, album=Album, genre=Genre, year=Year, track_num=TrackNumbar, total_track_num=TotalTrackNumbar, disc_num=DiscNumbar, total_disc_num=TotalDiscNumbar)
+class M4A_TagEditor(ui.View):
+	def will_close(self):
+		try:
+			remove(FilePath)
+		except:
+			pass
+
+class HELP(ui.View):
+	def __init__(self):
+		w,h = ui.get_screen_size()
+		self.TV = ui.TextView()
+		self.TV.width = w*1
+		self.TV.height = h*1
+		self.TV.content_size = (3500, 2500)
+		self.TV.editable = False
+		self.TV.font = ('<system-bold>', 20)
+		self.TV.text = HelpText
+		self.TV.text_color = '#fffaf4'
+		self.TV.background_color = '#292929'
+		self.background_color = '#292929'
+		self.name = 'ヘルプページ'
+		self.add_subview(self.TV)
+
+def HelpPage(_se):
+	HELP().present('sheet')
 
 v = ui.load_view()
 v.present('sheet')
