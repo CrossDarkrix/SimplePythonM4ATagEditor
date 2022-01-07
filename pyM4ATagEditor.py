@@ -1,34 +1,11 @@
-import ui, photos, sys, os.path, appex
+import ui, photos, sys, os.path, appex, base64
 from console import open_in
 from mutagen.mp4 import MP4, MP4Cover
 from os import getcwd as pwd, remove
 from shutil import copyfile
+
 current_directory = pwd()
 FilePath = ''
-HelpText = """[M4ATagEditor ヘルプページ]\n
-[使い方]
-・Pythonista3からの場合:
-「ファイル名」に編集したいm4aファイルのフルパスを入力してください。\n
-・共有メニューからの場合:
-ファイルを長押し等で共有メニューを開き、「Run Pythonista Script」から任意の名前にしたエクステンションを開く。\n
-[各種ボタンの説明]
-・共有されたファイルの表示:
-共有メニューから開いたファイルを表示させる為のボタンです。\n
-・ヘルプボタン:
-このページを開くボタンです。\n
-・データの読み込み:
-共有メニューから開いたファイルからメタデータを読み込みます。\n
-・画像の読み込み:
-フォトライブラリーからアルバムジャケットを選べます。\n
-・タグを設定して書き出す:
-設定したメタデータをファイル(一時ファイル)に書き出して他のアプリから開けるようにします。\n
-[Q&A]
-・一時ファイルの消し方:
-左上にある「❌」ボタンを押すと一時ファイルが削除される様になっており、手動で消したい場合は「$HOME/tmp」に一時ファイルを保存しています。\n
-・一時ファイルを何故作成するか:
-共有メニューの制約上共有したファイルへ直接書き込めないようです。\nなので一時ファイルをPythonista3へコピーしてから書き出しています。\n
-・何故M4A専用なのか:
-今どきM4Aだけのタグの書き出しは使い勝手が限られるのですが、Pythonista3が使えるメモリーサイズが限られているのでFlac等を読み込むとクラッシュしてしまうのと、アルバムジャケットを読み書きするのが複雑なのでM4Aだけに絞りました。\n\n\n\n\n"""
 
 try:
 	tmp_read_file = appex.get_attachments()[0]
@@ -219,10 +196,11 @@ class HELP(ui.View):
 		self.height = h*1
 		self.TV.editable = False
 		self.TV.font = ('<system-bold>', 20)
-		self.TV.text = HelpText
+		self.TV.text = base64.b64decode("CltNNEFUYWdFZGl0b3Ig44OY44Or44OX44Oa44O844K4XQoKW+S9v+OBhOaWuV0K44O7UHl0aG9uaXN0YTPjgYvjgonjga7loLTlkIg6CuOAjOODleOCoeOCpOODq+WQjeOAjeOBq+e3qOmbhuOBl+OBn+OBhG00YeODleOCoeOCpOODq+OBruODleODq+ODkeOCueOCkuWFpeWKm+OBl+OBpuOBj+OBoOOBleOBhOOAggoK44O75YWx5pyJ44Oh44OL44Ol44O844GL44KJ44Gu5aC05ZCIOgrjg5XjgqHjgqTjg6vjgpLplbfmirzjgZfnrYnjgaflhbHmnInjg6Hjg4vjg6Xjg7zjgpLplovjgY3jgIHjgIxSdW4gUHl0aG9uaXN0YSBTY3JpcHTjgI3jgYvjgonku7vmhI/jga7lkI3liY3jgavjgZfjgZ/jgqjjgq/jgrnjg4bjg7Pjgrfjg6fjg7PjgpLplovjgY/jgIIKClvlkITnqK7jg5zjgr/jg7Pjga7oqqzmmI5dCuODu+WFseacieOBleOCjOOBn+ODleOCoeOCpOODq+OBruihqOekujoK5YWx5pyJ44Oh44OL44Ol44O844GL44KJ6ZaL44GE44Gf44OV44Kh44Kk44Or44KS6KGo56S644GV44Gb44KL54K644Gu44Oc44K/44Oz44Gn44GZ44CCCgrjg7vjg5jjg6vjg5fjg5zjgr/jg7M6CuOBk+OBruODmuODvOOCuOOCkumWi+OBj+ODnOOCv+ODs+OBp+OBmeOAggoK44O744OH44O844K/44Gu6Kqt44G/6L6844G/OgrlhbHmnInjg6Hjg4vjg6Xjg7zjgYvjgonplovjgYTjgZ/jg5XjgqHjgqTjg6vjgYvjgonjg6Hjgr/jg4fjg7zjgr/jgpLoqq3jgb/ovrzjgb/jgb7jgZnjgIIKCuODu+eUu+WDj+OBruiqreOBv+i+vOOBvzoK44OV44Kp44OI44Op44Kk44OW44Op44Oq44O844GL44KJ44Ki44Or44OQ44Og44K444Oj44Kx44OD44OI44KS6YG444G544G+44GZ44CCCgrjg7vjgr/jgrDjgpLoqK3lrprjgZfjgabmm7jjgY3lh7rjgZk6CuioreWumuOBl+OBn+ODoeOCv+ODh+ODvOOCv+OCkuODleOCoeOCpOODqyjkuIDmmYLjg5XjgqHjgqTjg6sp44Gr5pu444GN5Ye644GX44Gm5LuW44Gu44Ki44OX44Oq44GL44KJ6ZaL44GR44KL44KI44GG44Gr44GX44G+44GZ44CCCgpbUSZBXQrjg7vkuIDmmYLjg5XjgqHjgqTjg6vjga7mtojjgZfmlrk6CuW3puS4iuOBq+OBguOCi+OAjOKdjOOAjeODnOOCv+ODs+OCkuaKvOOBmeOBqOS4gOaZguODleOCoeOCpOODq+OBjOWJiumZpOOBleOCjOOCi+anmOOBq+OBquOBo+OBpuOBiuOCiuOAgeaJi+WLleOBp+a2iOOBl+OBn+OBhOWgtOWQiOOBr+OAjCRIT01FL3RtcOOAjeOBq+S4gOaZguODleOCoeOCpOODq+OCkuS/neWtmOOBl+OBpuOBhOOBvuOBmeOAggoK44O75LiA5pmC44OV44Kh44Kk44Or44KS5L2V5pWF5L2c5oiQ44GZ44KL44GLOgrlhbHmnInjg6Hjg4vjg6Xjg7zjga7liLbntITkuIrlhbHmnInjgZfjgZ/jg5XjgqHjgqTjg6vjgbjnm7TmjqXmm7jjgY3ovrzjgoHjgarjgYTjgojjgYbjgafjgZnjgIIK44Gq44Gu44Gn5LiA5pmC44OV44Kh44Kk44Or44KSUHl0aG9uaXN0YTPjgbjjgrPjg5Tjg7zjgZfjgabjgYvjgonmm7jjgY3lh7rjgZfjgabjgYTjgb7jgZnjgIIKCuODu+S9leaVhU00QeWwgueUqOOBquOBruOBizoK5LuK44Gp44GNTTRB44Gg44GR44Gu44K/44Kw44Gu5pu444GN5Ye644GX44Gv5L2/44GE5Yud5omL44GM6ZmQ44KJ44KM44KL44Gu44Gn44GZ44GM44CBUHl0aG9uaXN0YTPjgYzkvb/jgYjjgovjg6Hjg6Ljg6rjg7zjgrXjgqTjgrrjgYzpmZDjgonjgozjgabjgYTjgovjga7jgadGbGFj562J44KS6Kqt44G/6L6844KA44Go44Kv44Op44OD44K344Ol44GX44Gm44GX44G+44GG44Gu44Go44CB44Ki44Or44OQ44Og44K444Oj44Kx44OD44OI44KS6Kqt44G/5pu444GN44GZ44KL44Gu44GM6KSH6ZuR44Gq44Gu44GnTTRB44Gg44GR44Gr57We44KK44G+44GX44Gf44CCCgoKCgo=").decode()
 		self.TV.text_color = '#fffaf4'
 		self.TV.background_color = '#292929'
 		self.background_color = '#292929'
+		self.tint_color = '#ff0000'
 		self.name = 'ヘルプページ'
 		self.add_subview(self.TV)
 
