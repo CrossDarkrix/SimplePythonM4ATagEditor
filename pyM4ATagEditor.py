@@ -5,7 +5,7 @@ from os import getcwd as pwd, remove
 from shutil import copyfile
 current_directory = pwd()
 FilePath = ''
-HelpText = """\t\tM4ATagEditor ヘルプページ\n
+HelpText = """[M4ATagEditor ヘルプページ]\n
 [使い方]
 ・Pythonista3からの場合:
 「ファイル名」に編集したいm4aファイルのフルパスを入力してください。\n
@@ -211,11 +211,12 @@ class M4A_TagEditor(ui.View):
 
 class HELP(ui.View):
 	def __init__(self):
-		w,h = ui.get_screen_size()
+		w, h = ui.get_screen_size()
 		self.TV = ui.TextView()
 		self.TV.width = w*1
 		self.TV.height = h*1
-		self.TV.content_size = (3500, 2500)
+		self.width = w*1
+		self.height = h*1
 		self.TV.editable = False
 		self.TV.font = ('<system-bold>', 20)
 		self.TV.text = HelpText
